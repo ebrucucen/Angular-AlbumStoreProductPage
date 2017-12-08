@@ -8,14 +8,15 @@ import { ProductService } from '../product.service';
   styleUrls: ['./product-tracklisting.component.css']
 })
 export class ProductTracklistingComponent implements OnInit {
-  albumInfo:Album;
+  albumInfo: Album;
 
-  constructor(private _productService:ProductService) { 
+  constructor(private _productService: ProductService) { 
 
   }
 
   ngOnInit() {
-    this._productService.getAlbum(1).subscribe(response=>this.albumInfo=response);
+    this._productService.getAlbum(1).subscribe(response=>
+      this.albumInfo = response);
   } 
 
 }
